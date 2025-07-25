@@ -11,23 +11,22 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/off_white"
+        android:background="@color/white"
         tools:context=".ui.MainActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_layout_header"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:elevation="4dp"
-            android:padding="@dimen/margin_padding_size_large"
+            android:paddingVertical="@dimen/margin_padding_size_xxxlarge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="200dp"
+                android:layout_width="270dp"
                 android:layout_height="100dp"
                 android:contentDescription="logo"
                 android:src="@drawable/help_logo"
@@ -36,13 +35,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
-                tools:text="v1.0.0"
-                tools:visibility="gone" />
 
             <TextView
                 android:id="@+id/textview_app_mantra"
@@ -52,7 +44,6 @@
                 android:text="@string/app_mantra"
                 android:textAlignment="center"
                 android:textColor="@color/dark_gray"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -63,37 +54,22 @@
             android:id="@+id/constraint_layout_body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_padding_size_large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraint_layout_header">
 
-            <TextView
-                android:id="@+id/textview_welcome"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_padding_size_xxlarge"
-                android:text="Welcome"
-                android:textAlignment="center"
-                android:textSize="@dimen/text_size_xlarge"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textview_welcome_description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_padding_size_medium"
                 android:paddingHorizontal="@dimen/margin_padding_size_large"
-                android:text="Get started by creating a new project or learn more about the app."
+                android:text="@string/get_started_description"
                 android:textAlignment="center"
                 android:textColor="@color/dark_gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textview_welcome" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,7 +82,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textview_welcome_description">
 
-                <com.google.android.material.button.MaterialButton
+                <Button
+                    android:id="@+id/button_new_project"
                     style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -118,7 +95,8 @@
                     app:iconPadding="8dp" />
 
 
-                <com.google.android.material.button.MaterialButton
+                <Button
+                    android:id="@+id/button_about"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -126,15 +104,13 @@
                     android:paddingVertical="@dimen/margin_padding_size_medium"
                     android:text="About"
                     app:cornerRadius="6dp"
-                    app:strokeColor="@color/gray"
                     app:icon="@drawable/ic_info"
                     app:iconGravity="textStart"
-                    app:iconPadding="8dp"/>
+                    app:iconPadding="8dp"
+                    app:strokeColor="@color/gray" />
 
 
             </LinearLayout>
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

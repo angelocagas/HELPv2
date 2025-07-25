@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">HELP</string>
     <string name="app_mantra">Your electrical design companion.</string>
+    <string name="get_started_description">Get started by creating a new project or learn more about the app.</string>
+    <string name="about_description">Handheld Offline Electrical Computing Application for Load Schedule and Panelboard Details Creation in Single Phase System</string>
 </resources>
